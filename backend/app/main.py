@@ -30,15 +30,13 @@ class SPAStaticFiles(StaticFiles):
 
 app = FastAPI(title="VietRide X API", version="0.1.0", lifespan=lifespan)
 
-if settings.cors_origin_list:
-    allow_creds = settings.cors_origin_list != ["*"]
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=settings.cors_origin_list,
-        allow_credentials=allow_creds,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(meta.router)
 app.include_router(trip.router)
