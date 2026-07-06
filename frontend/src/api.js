@@ -1,6 +1,6 @@
 import { getToken } from './auth';
 
-export const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
+export const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://datvexekhach.onrender.com/api';
 
 export async function api(path, options) {
   const response = await fetch(`${API_BASE}${path}`, {
