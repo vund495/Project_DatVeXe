@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    database_url: str = "postgresql+asyncpg://postgres:password@db.bqoshsbirwfyuvdhzrjm.supabase.co:5432/postgres"
+    database_url: str = "postgresql+asyncpg://postgres.bqoshsbirwfyuvdhzrjm:password@aws-1-ap-southeast-2.pooler.supabase.com:6543/postgres"
     alembic_database_url: str = ""
     secret_key: str = "your-secret-key"
     gemini_api_key: str = ""
