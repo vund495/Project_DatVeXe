@@ -2,9 +2,9 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    database_url: str = "postgresql+asyncpg://postgres.bqoshsbirwfyuvdhzrjm:password@aws-1-ap-southeast-2.pooler.supabase.com:6543/postgres"
+    database_url: str
     alembic_database_url: str = ""
-    secret_key: str = "your-secret-key"
+    secret_key: str
     gemini_api_key: str = ""
     cors_origins: str = "http://localhost:5173,http://127.0.0.1:5173,https://project-datvexe.onrender.com"
 
