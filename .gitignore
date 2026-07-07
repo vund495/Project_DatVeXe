@@ -53,6 +53,7 @@ venv.bak/
 # ─── Backend ───
 backend/.env
 backend/.env.*
+!backend/.env.example
 backend/*.log
 backend/alembic/versions/*.pyc
 
